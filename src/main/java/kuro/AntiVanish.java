@@ -413,7 +413,7 @@ public final class AntiVanish {
 
    /** ClientPlayNetworkHandlerMixin'den cagrilir (ana thread). Bizim istegimizin cevabiysa true doner. */
    public static boolean onSuggestions(CommandSuggestionsS2CPacket pk) {
-      int id = pk.getCompletionId();
+      int id = pk.id();
       if (id > ID_BASE || id <= ID_BASE - CMDS.length) {
          return false;
       }
